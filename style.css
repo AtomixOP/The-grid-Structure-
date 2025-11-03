@@ -1,41 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-main{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    color: azure;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr;
-    grid-template-areas: "header header header"
-                          "section section section"
-                          "div div2 div3";
+main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: azure;
+
+  display: grid;
+
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 0.5fr 0.5fr;
+  grid-template-areas: "header header header"
+                       "section section section"
+                       "div-left bottom-up div-right"
+                      "div-left bottom-down div-right"
+  ;
 }
-header{
-    grid-area: header;
-    background-color: aqua;
+header {
+  grid-area: header;
+  background-color: aqua;
 }
-section{
-    grid-area: section;
-    background-color: blueviolet;
+section {
+  grid-area: section;
+  background-color: blueviolet;
 }
-#div1{
-    grid-area: div;
-    background-color: rgb(222, 174, 135);
+#div-left {
+  grid-area: div-left;
+  background-color: rgb(222, 174, 135);
 }
-#div2{
-    grid-area: div2;
-    background-color: rgb(148, 135, 222);
+#bottom-Up {
+  grid-area: bottom-up;
+  background-color: rgb(148, 135, 222);
 }
-#div3{
-    grid-area: div3;
-    background-color: rgb(212, 135, 222);
+#bottom-down {
+  grid-area: bottom-down;
+  background-color: rgb(212, 135, 222);
+}
+#div-right {
+  grid-area: div-right;
+  background-color: cadetblue;
 }
