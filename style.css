@@ -13,40 +13,38 @@ main {
   width: 100%;
   background-color: black;
   color: azure;
-
   display: grid;
-
   grid-gap: 10px;
   padding: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 80px 1fr 0.5fr 0.5fr;
-  grid-template-areas: "header header header"
-                       "section section section"
-                       "div-left bottom-up div-right"
-                      "div-left bottom-down div-right"
-  ;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "left-up top-center top-right"
+                        "left-up center bottom-right "
+                        "left-bottom left-bottom bottom-right"   ;
+
+
 }
-header {
-  grid-area: header;
+#left-up {
+    grid-area: left-up;
   background-color: aqua;
 }
-section {
-  grid-area: section;
+#top-center {
+    grid-area: top-center;
   background-color: blueviolet;
 }
-#div-left {
-  grid-area: div-left;
+#top-right {
+    grid-area: top-right;
   background-color: rgb(222, 174, 135);
 }
-#bottom-Up {
-  grid-area: bottom-up;
+#center {
+grid-area: center;
   background-color: rgb(148, 135, 222);
 }
-#bottom-down {
-  grid-area: bottom-down;
-  background-color: rgb(212, 135, 222);
+#left-bottom {
+    grid-area: left-bottom;
+ background-color: rgb(212, 135, 222);
 }
-#div-right {
-  grid-area: div-right;
+#bottom-right {
+grid-area: bottom-right;
   background-color: cadetblue;
 }
