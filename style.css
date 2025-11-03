@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-areas: "header header header"
+                          "section section section"
+                          "div div2 div3";
+}
+header{
+    grid-area: header;
+    background-color: aqua;
+}
+section{
+    grid-area: section;
+    background-color: blueviolet;
+}
+#div1{
+    grid-area: div;
+    background-color: rgb(222, 174, 135);
+}
+#div2{
+    grid-area: div2;
+    background-color: rgb(148, 135, 222);
+}
+#div3{
+    grid-area: div3;
+    background-color: rgb(212, 135, 222);
+}
